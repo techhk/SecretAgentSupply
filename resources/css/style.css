@@ -1,7 +1,7 @@
 html{
   color:white;
   font-size: 18px;
-  width:960px;
+  max-width:960px;
 }
 /*Header Section*/
 .top{
@@ -61,6 +61,9 @@ html{
   font-size: 1.5rem;
   padding: 0.75rem 0 0.75rem 0;
 }
+.mobilelist{
+  display: none;
+}
 /*Product Image*/
 .productcontainer{
   margin-top: 3rem;
@@ -68,7 +71,7 @@ html{
   display:flex;
   justify-content: space-between;
 }
-.productimage{
+.productpen,.productwatch,.productglass{
   border: 4px solid black;
   width: 30%;
   overflow: hidden;
@@ -114,4 +117,65 @@ footer{
   display: flex;
   align-items: center;
   justify-content: flex-start;
+}
+/*tablet size*/
+@media only screen and (max-width:1024px){
+  html{
+    font-size: 16px;
+  }
+  .list li{
+    display: none;
+  }
+  .mobilelist{
+    display:block;
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 0.75rem 0 0.75rem 0;
+    margin: auto;
+  }
+  .productglass{
+    display:none;
+  }
+  .productpen,.productwatch{
+    width:47%;
+  }
+  .info{
+    width:35%;
+  }
+}
+/*phone size*/
+@media only screen and (max-width:470px){
+  .main{
+    height: 15rem;
+  }
+  .box{
+    margin-top: 10rem;
+    padding: 1rem 2rem;
+  }
+  .box h4{
+    font-size: 0.77rem;
+  }
+  .box h1{
+    font-size: 1rem;
+  }
+  .productwatch{
+    display: none;
+  }
+  .productpen{
+    width:90%;
+  }
+  .productcontainer{
+    justify-content: center;
+  }
+  .businessinfo{
+    flex-direction: column;
+  }
+  .info{
+    width: 90%;
+    margin:0.5rem 0;
+  }
+  footer{
+   display: block;
+   text-align: center;
+  }
 }
